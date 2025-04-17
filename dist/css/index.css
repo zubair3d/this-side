@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'hsff';
+  src: url('dist/fonts/FDPBR.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 .site-header:after, .logo-wrap:after {
   clear: both;
   content: '';
