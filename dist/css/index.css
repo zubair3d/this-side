@@ -1872,6 +1872,13 @@ nav {
   }
 }
 
+@media (max-width: 932px) {
+  .js-responsive-nav .pf-nav-social a:hover svg {
+    fill: #333 !important; /* 25% darker than original #666 */
+    transition: fill 0.2s ease;
+  }
+}
+
 
 /* Masthead font size */
 @media (max-width: 932px) {
