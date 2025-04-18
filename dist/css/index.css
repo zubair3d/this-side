@@ -1871,3 +1871,20 @@ nav {
     padding: 15px 0 !important;
   }
 }
+
+
+/* Masthead font size */
+@media (max-width: 932px) {
+  .masthead .js-inline-text-editable.main-text {
+    font-size: 30px !important;
+    line-height: 36px !important;
+  }
+}
+
+/* Mast head font size */
+@media (max-width: 540px) {
+  .masthead .js-inline-text-editable.main-text {
+    font-size: 30px !important;
+    line-height: 36px !important;
+  }
+}
