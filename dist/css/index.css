@@ -1880,6 +1880,10 @@ nav {
 }
 
 
+
+
+
+
 /* Masthead font size */
 @media (max-width: 932px) {
   .masthead .js-inline-text-editable.main-text {
@@ -1894,4 +1898,46 @@ nav {
     font-size: 25px !important;
     line-height: 31px !important;
   }
+}
+
+
+
+
+
+
+/* Add these changes to your index.css */
+
+/* Container padding for screen edges */
+.project-covers {
+  padding: 40px 20px; /* Top/bottom - Left/right */
+  gap: 20px; /* Space between grid items */
+}
+
+/* Desktop grid items */
+.project-cover {
+  width: calc(50% - 10px); /* Account for gap */
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+/* Mobile layout */
+@media (max-width: 540px) {
+  .project-covers {
+    padding: 30px 15px;
+    gap: 15px;
+  }
+  
+  .project-cover {
+    width: 100%;
+  }
+}
+
+/* Optional: Add hover spacing consistency */
+.project-cover .cover-image-wrap {
+  margin: 10px;
+}
+
+.project-cover .cover-image {
+  border-radius: 8px; /* Optional rounded corners */
+  overflow: hidden;
 }
