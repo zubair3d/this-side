@@ -854,7 +854,7 @@ nav .link-title:last-child {
 
 .logo {
   font-family: ykgy;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
@@ -897,7 +897,7 @@ nav {
   nav .gallery-title a {
     color: #F5F5F5;
     font-family: ykgy;
-    font-size: 14px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px; }
@@ -927,7 +927,7 @@ nav {
   nav .page-title a {
     color: #DCDCDC;
     font-family: ykgy;
-    font-size: 14px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px; }
@@ -960,13 +960,19 @@ nav {
     padding-left: 10px;
     padding-right: 0px; }
   .pf-nav-social a:hover svg {
-    fill: #CCCCCC;
+    fill: #ffffff;  /* Lighter gray on hover (desktop) */
     opacity: 1; }
+  @media (max-width: 932px) {
+    .responsive-nav .pf-nav-social a:hover svg {
+      fill: #333; /* Darker gray on hover (mobile) */	  } }
   .pf-nav-social svg {
-    fill: #DCDCDC;
-    height: 25px;
+    fill: #DCDCDC; /* Light gray for desktop (black background) */
+    height: 35px;
     opacity: 1;
-    width: 25px; }
+    width: 35px; }
+  @media (max-width: 932px) {
+    .responsive-nav .pf-nav-social svg {
+      fill: #777; /* Darker gray for mobile */	  } }
   @media (max-width: 932px) {
     .pf-nav-social li {
       padding-top: 0px;
@@ -1772,3 +1778,96 @@ nav {
 @media (max-width: 932px) {
   .back-to-top-fixed {
     display: none; } }
+	
+
+
+
+
+
+/* Mobile styles (under 932px) */
+@media (max-width: 932px) {
+  /* 1. Remove hamburger */
+  .hamburger-click-area {
+    display: none !important;
+  }
+
+  /* 2. Header layout */
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5% !important;
+  }
+
+  /* 3. Navigation styling */
+  .site-header nav {
+    display: flex !important;
+    order: 2;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* 4. Logo adjustments */
+  .logo-wrap {
+    width: 100% !important;
+    order: 1;
+    padding: 15px 0;
+  }
+
+  /* 5. Social icons bar */
+  .pf-nav-social {
+    order: 4;
+    background: white;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+
+  .pf-nav-social svg {
+    fill: #666 !important;
+  }
+
+  /* 6. Masthead spacing */
+  .masthead {
+    order: 3;
+    padding: 30px 0 !important;
+  }
+
+  /* 7. Hide mobile overlay */
+  .responsive-nav {
+    display: none !important;
+  }
+}
+
+/* 1. Hide responsive social icons on desktop */
+@media (min-width: 933px) {
+  .js-responsive-nav {
+    display: none !important;
+  }
+}
+
+/* 2. Center align social icons in mobile view */
+@media (max-width: 932px) {
+  .js-responsive-nav .pf-nav-social ul {
+    justify-content: center !important;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .js-responsive-nav .pf-nav-social li {
+    padding: 0 8px !important; /* Adjust spacing between icons */
+  }
+
+  .js-responsive-nav .pf-nav-social {
+    background: white;
+    padding: 15px 0 !important;
+  }
+}
