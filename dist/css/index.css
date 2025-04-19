@@ -1958,6 +1958,59 @@ nav {
 
 
 
+/* HEADER Navigation links only */
+.site-header .nav-container a {
+  color: #666 !important;
+  transition: color 0.3s ease;
+}
+
+.site-header .nav-container a:hover {
+  color: #333 !important;
+}
+
+/* Social icons (header only) */
+.site-header .pf-nav-social svg {
+  fill: #666 !important;
+  transition: fill 0.3s ease;
+}
+
+.site-header .pf-nav-social a:hover svg {
+  fill: #333 !important;
+}
+
+
+/* HEADER Navigation links - Enhanced Specificity */
+.site-header nav .gallery-title a,
+.site-header nav .project-title a,
+.site-header nav .page-title a,
+.site-header nav .link-title a {
+  color: #666 !important;
+  transition: color 0.3s ease !important;
+}
+
+.site-header nav .gallery-title a:hover,
+.site-header nav .project-title a:hover,
+.site-header nav .page-title a:hover,
+.site-header nav .link-title a:hover {
+  color: #333 !important;
+}
+
+/* Social icons (header only) - Keep this */
+.site-header .pf-nav-social svg {
+  fill: #666 !important;
+  transition: fill 0.3s ease !important;
+}
+
+.site-header .pf-nav-social a:hover svg {
+  fill: #333 !important;
+}
+
+
+
+
+
+
+
 
 
 
@@ -2068,5 +2121,106 @@ nav {
 
 
 
+/* Desktop masthead height */
+@media (min-width: 933px) {
+  .masthead {
+    height: 30vh; /* Adjust desktop height */
+  }
+}
+
+/* Mobile masthead height */
+@media (max-width: 932px) {
+  .masthead {
+    height: 30vh; /* Adjust mobile height */
+    margin-top: 0; /* Remove header offset if needed */
+  }
+}
 
 
+
+
+/* Footer navigation */
+.footer-nav {
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-nav .nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-nav a {
+  color: #DCDCDC;
+  font-family: ykgy;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.footer-nav a:hover {
+  opacity: 0.7;
+}
+
+/* Mobile adjustment */
+@media (max-width: 932px) {
+  .footer-nav {
+    margin-bottom: 30px; /* Increased mobile spacing */
+    padding: 0px 0 !important; /* Adjust if needed */
+  }
+  
+  
+  .footer-nav .nav-container {
+    flex-direction: row; /* Keep horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping if screen is too small */
+    gap: 15px 25px; /* 15px vertical, 25px horizontal */
+    justify-content: center;
+  }
+
+  .footer-nav a {
+    font-size: 16px; /* Slightly smaller on mobile */
+  }
+}
+
+/* Remove any existing float/alignment */
+.footer-nav .gallery-title,
+.footer-nav .page-title {
+  float: none !important;
+  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+
+
+/* Show footer social strip on all devices */
+.js-responsive-nav {
+  display: block !important;
+}
+
+/* Remove duplicate mobile social strip */
+@media (max-width: 932px) {
+  .site-header + .js-responsive-nav .pf-nav-social {
+    display: none !important;
+  }
+}
+
+
+/* Show BOTTOM social strip everywhere */
+.footer-social {
+  display: block !important;
+}
+
+/* Hide TOP social strip on desktop */
+@media (min-width: 933px) {
+  .js-responsive-nav:not(.footer-social) {
+    display: none !important;
+  }
+}
+
+/* Mobile keeps both strips by default */
