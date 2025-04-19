@@ -1142,7 +1142,7 @@ nav {
 
 .site-footer {
   font-family: ykgy;
-  font-size: 14px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
@@ -1155,18 +1155,18 @@ nav {
   width: 100%; }
   .site-footer,
   .site-footer a {
-    color: #A9A9A9; }
+    color: #fcfcfc; }
 
 @media (max-width: 932px) {
   .site-footer {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     padding-bottom: 46px;
     padding-top: 46px; } }
 
 @media (max-width: 540px) {
   .site-footer {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     padding-bottom: 39px;
     padding-top: 39px; } }
@@ -2224,3 +2224,32 @@ nav {
 }
 
 /* Mobile keeps both strips by default */
+
+
+
+
+
+
+
+
+
+/* In your existing .site-footer rules */
+.site-footer {
+  padding-bottom: 60px;  /* Reduced from 120px */
+  padding-top: 60px;     /* Reduced from 120px */
+}
+
+/* Keep existing mobile styles intact */
+@media (max-width: 932px) {
+  .site-footer {
+    padding-bottom: 46px; /* Original mobile value */
+    padding-top: 46px;    /* Original mobile value */
+  }
+}
+
+@media (max-width: 540px) {
+  .site-footer {
+    padding-bottom: 39px; /* Original mobile value */
+    padding-top: 39px;    /* Original mobile value */
+  }
+}
