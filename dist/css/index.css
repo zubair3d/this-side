@@ -1845,31 +1845,19 @@ nav {
   }
 }
 
-/* 1. Hide responsive social icons on desktop */
-@media (min-width: 933px) {
-  .js-responsive-nav {
-    display: none !important;
-  }
-}
+
 
 /* 2. Center align social icons in mobile view */
 @media (max-width: 932px) {
   .js-responsive-nav .pf-nav-social ul {
-    justify-content: center !important;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
+  margin: 0 auto !important;
+  padding: 0 !important;
   }
 
   .js-responsive-nav .pf-nav-social li {
     padding: 0 8px !important; /* Adjust spacing between icons */
   }
 
-  .js-responsive-nav .pf-nav-social {
-    background: white;
-    padding: 15px 0 !important;
-  }
 }
 
 @media (max-width: 932px) {
@@ -1880,7 +1868,11 @@ nav {
 }
 
 
-
+/* Optional: Add hover effect ***DESKTOP*** */ 
+.js-responsive-nav .pf-nav-social a:hover svg {
+    fill: #333 !important; /* 25% darker than original #666 */
+    transition: fill 0.2s ease;
+}
 
 
 
@@ -1941,3 +1933,140 @@ nav {
   border-radius: 8px; /* Optional rounded corners */
   overflow: hidden;
 }
+
+
+/* With this: */
+.js-responsive-nav .pf-nav-social {
+  /* Works on all screen sizes */
+  width: 100% !important; /* Force full width */
+  background: #fff !important; /* White background */
+  padding: 20px 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.js-responsive-nav .pf-nav-social svg {
+  fill: #666 !important;
+  height: 35px !important; /* Match desktop size */
+  width: 35px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1. Main header background & base styles */
+.site-header {
+  background: #fff !important; /* Force white background */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Optional subtle shadow */
+}
+
+/* 2. Desktop header text/icon colors */
+.site-header .gallery-title a,
+.site-header .page-title a,
+.site-header .logo a {
+  color: #333 !important; /* Dark text */
+}
+
+.site-header .pf-nav-social svg {
+  fill: #666 !important; /* Darker icons */
+}
+
+/* 3. Mobile header adjustments */
+@media (max-width: 932px) {
+  /* Hide hamburger */
+  .hamburger-click-area {
+    display: none !important;
+  }
+
+  /* Show navigation */
+  nav {
+    display: flex !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Stack logo and navigation */
+  .site-header {
+    flex-direction: column;
+    padding: 15px 5% !important;
+  }
+
+  .logo-wrap {
+    order: -1;
+    padding: 10px 0 !important;
+  }
+
+  /* Center mobile navigation */
+  .nav-container {
+    justify-content: center !important;
+    gap: 15px !important;
+  }
+
+  /* Mobile link colors */
+  .site-header .gallery-title a,
+  .site-header .page-title a {
+    color: #444 !important;
+  }
+}
+
+/* 4. Keep masthead black */
+.masthead {
+  background-color: #000 !important;
+  margin-top: 60px; /* Offset for fixed header */
+}
+
+/* 5. Header height/spacing adjustments */
+.site-header {
+  height: auto !important;
+  padding: 20px 3% !important;
+}
+
+
+
+/* 5. Header height/spacing adjustments MOBILE */ 
+@media (max-width: 932px) {
+.site-header {
+  height: auto !important;
+  padding: 8px 3% !important;
+  }
+}
+
+
+
+
+
+.logo-wrap {
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+/* 7. Remove original header shadow */
+.site-header.on-scroll {
+  box-shadow: none !important;
+}
+
+/* 7. Remove social media strip from desktop */
+@media (min-width: 933px) {
+  .js-responsive-nav {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
