@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'hsff';
+  src: url('../fonts/FDPBR.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ykgy';
+  src: url('../fonts/HDR.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 .site-header:after, .logo-wrap:after {
   clear: both;
   content: '';
@@ -408,7 +422,7 @@ body {
   visibility: hidden; }
 
 html {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   /* stylelint-disable function-url-quotes */
   background-image: url("");
   /* stylelint-enable function-url-quotes */
@@ -840,7 +854,7 @@ nav .link-title:last-child {
 
 .logo {
   font-family: ykgy;
-  font-size: 20px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
@@ -883,7 +897,7 @@ nav {
   nav .gallery-title a {
     color: #F5F5F5;
     font-family: ykgy;
-    font-size: 14px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px; }
@@ -913,7 +927,7 @@ nav {
   nav .page-title a {
     color: #DCDCDC;
     font-family: ykgy;
-    font-size: 14px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px; }
@@ -950,9 +964,9 @@ nav {
     opacity: 1; }
   .pf-nav-social svg {
     fill: #DCDCDC;
-    height: 25px;
+    height: 35px;
     opacity: 1;
-    width: 25px; }
+    width: 35px; }
   @media (max-width: 932px) {
     .pf-nav-social li {
       padding-top: 0px;
@@ -2975,3 +2989,371 @@ nav {
       margin-left: 0;
       margin-right: 0;
       margin-top: 0px; } }
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+/* Mobile styles (under 932px) */
+@media (max-width: 932px) {
+  /* 1. Remove hamburger */
+  .hamburger-click-area {
+    display: none !important;
+  }
+
+  /* 2. Header layout */
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5% !important;
+  }
+
+  /* 3. Navigation styling */
+  .site-header nav {
+    display: flex !important;
+    order: 2;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* 4. Logo adjustments */
+  .logo-wrap {
+    width: 100% !important;
+    order: 1;
+    padding: 15px 0;
+  }
+
+  /* 5. Social icons bar */
+  .pf-nav-social {
+    order: 4;
+    background: white;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+
+  .pf-nav-social svg {
+    fill: #666 !important;
+  }
+
+  /* 6. Masthead spacing */
+  .masthead {
+    order: 3;
+    padding: 30px 0 !important;
+  }
+
+  /* 7. Hide mobile overlay */
+  .responsive-nav {
+    display: none !important;
+  }
+}
+
+
+
+/* 2. Center align social icons in mobile view */
+@media (max-width: 932px) {
+  .js-responsive-nav .pf-nav-social ul {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  }
+
+  .js-responsive-nav .pf-nav-social li {
+    padding: 0 8px !important; /* Adjust spacing between icons */
+  }
+
+}
+
+
+
+
+
+
+
+
+/* HEADER Navigation links - Enhanced Specificity */
+.site-header nav .gallery-title a,
+.site-header nav .project-title a,
+.site-header nav .page-title a,
+.site-header nav .link-title a {
+  color: #666 !important;
+  transition: color 0.3s ease !important;
+}
+
+.site-header nav .gallery-title a:hover,
+.site-header nav .project-title a:hover,
+.site-header nav .page-title a:hover,
+.site-header nav .link-title a:hover {
+  color: #333 !important;
+}
+
+/* Social icons (header only) - Keep this */
+.site-header .pf-nav-social svg {
+  fill: #666 !important;
+  transition: fill 0.3s ease !important;
+}
+
+.site-header .pf-nav-social a:hover svg {
+  fill: #333 !important;
+}
+
+
+
+
+
+/* 5. Header height/spacing adjustments */
+.site-header {
+  height: auto !important;
+  padding: 20px 3% !important;
+}
+
+
+
+/* 5. Header height/spacing adjustments MOBILE */ 
+@media (max-width: 932px) {
+.site-header {
+  height: auto !important;
+  padding: 8px 3% !important;
+  }
+}
+
+
+/* 1. Main header background & base styles */
+.site-header {
+  background: #fff !important; /* Force white background */
+  box-shadow: 0 1px 3px rgba(0,0,0,.4); /* Optional subtle shadow */
+}
+
+/* 2. Desktop header text/icon colors */
+.site-header .gallery-title a,
+.site-header .page-title a,
+.site-header .logo a {
+  color: #333 !important; /* Dark text */
+}
+
+.site-header .pf-nav-social svg {
+  fill: #666 !important; /* Darker icons */
+}
+
+/* 3. Mobile header adjustments */
+@media (max-width: 932px) {
+  /* Hide hamburger */
+  .hamburger-click-area {
+    display: none !important;
+  }
+
+  /* Show navigation */
+  nav {
+    display: flex !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Stack logo and navigation */
+  .site-header {
+    flex-direction: column;
+    padding: 15px 5% !important;
+  }
+
+  .logo-wrap {
+    order: -1;
+    padding: 10px 0 !important;
+  }
+
+  /* Center mobile navigation */
+  .nav-container {
+    justify-content: center !important;
+    gap: 15px !important;
+  }
+
+  /* Mobile link colors */
+  .site-header .gallery-title a,
+  .site-header .page-title a {
+    color: #444 !important;
+  }
+}
+
+/* 4. Keep masthead black */
+.masthead {
+  background-color: #000 !important;
+  margin-top: 60px; /* Offset for fixed header */
+}
+
+/* 5. Header height/spacing adjustments */
+.site-header {
+  height: auto !important;
+  padding: 20px 3% !important;
+}
+
+
+
+/* 5. Header height/spacing adjustments MOBILE */ 
+@media (max-width: 932px) {
+.site-header {
+  height: auto !important;
+  padding: 8px 3% !important;
+  }
+}
+
+
+
+
+
+.logo-wrap {
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+/* 7. Remove original header shadow */
+.site-header.on-scroll {
+  box-shadow: none !important;
+}
+
+/* 7. Remove social media strip from desktop */
+@media (min-width: 933px) {
+  .js-responsive-nav {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+/* With this: */
+.js-responsive-nav .pf-nav-social {
+  /* Works on all screen sizes */
+  width: 100% !important; /* Force full width */
+  background: #fff !important; /* White background */
+  padding: 15px 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.js-responsive-nav .pf-nav-social svg {
+  height: 35px !important; /* Match desktop size */
+  width: 35px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 932px) {
+  /* Show social icons on mobile */
+  .site-header .pf-nav-social {
+    display: flex !important;
+    order: 3;
+    width: 100%;
+    margin-top: 0px;
+    padding: 5px 0;
+  }
+
+  /* Center social icons */
+  .pf-nav-social ul {
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Adjust icon spacing */
+  .pf-nav-social li {
+    padding: 0 15px !important;
+  }
+
+  /* Reduce icon size for mobile */
+  .pf-nav-social svg {
+    height: 33px !important;
+    width: 33px !important;
+  }
+
+  /* Stack header elements vertically */
+  .site-header {
+    flex-direction: column;
+    padding: 15px 5% !important;
+  }
+
+  /* Adjust navigation spacing */
+  .nav-container {
+    order: 2;
+    margin: 17px 0;
+  }
+
+  /* Center logo */
+  .logo-wrap {
+    order: 1;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 932px) {
+  /* Remove default list padding */
+  .pf-nav-social ul {
+    padding-left: 0 !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  /* Remove individual side paddings */
+  .pf-nav-social li:first-child,
+  .pf-nav-social li:last-child {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+
+
+
+
+@media (max-width: 932px) {
+  /* Add vertical padding to nav links */
+  nav .gallery-title a,
+  nav .project-title a,
+  nav .page-title a,
+  nav .link-title a {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    display: inline-block; /* Ensures padding works properly */
+  }
+
+  /* Optional: Adjust overall nav container spacing */
+  .nav-container {
+    margin: 000px 0; /* Adds space above/below the navigation */
+  }
+}
