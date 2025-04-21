@@ -3111,7 +3111,7 @@ nav {
   transition: fill 0.3s ease !important;
 }
 
-.site-header .pf-nav-social a:hover svg {
+.site-header 
   fill: #333 !important;
 }
 
@@ -3134,6 +3134,10 @@ nav {
   padding: 8px 3% !important;
   }
 }
+
+  nav {
+    padding: 28px 0 !important;
+  }
 
 
 /* 1. Main header background & base styles */
@@ -3245,7 +3249,7 @@ nav {
   /* Works on all screen sizes */
   width: 100% !important; /* Force full width */
   background: #fff !important; /* White background */
-  padding: 15px 0 !important;
+  padding: 20px 0 !important;
   display: flex !important;
   justify-content: center !important;
 }
@@ -3336,7 +3340,7 @@ nav {
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
-
+}
 
 
 
@@ -3348,7 +3352,7 @@ nav {
   nav .page-title a,
   nav .link-title a {
     padding-top: 5px !important;
-    padding-bottom: 5px !important;
+    padding-bottom: 10px !important;
     display: inline-block; /* Ensures padding works properly */
   }
 
@@ -3357,3 +3361,206 @@ nav {
     margin: 000px 0; /* Adds space above/below the navigation */
   }
 }
+
+
+
+/* Add dropshadow line */
+.site-footer {
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.40);
+  padding-top: 40px; /* Space between line and text */
+  padding-bottom: 40px; /* Space between text and browser bottom */
+}
+
+/* Mobile adjustments */
+@media (max-width: 932px) {
+  .site-footer {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 540px) {
+  .site-footer {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+
+
+
+
+
+
+/* Footer navigation */
+.footer-nav {
+  width: 100%;
+  padding: 00px 0;
+  text-align: center;
+  background: #fff;
+}
+
+.footer-nav .nav-container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: #666 !important;
+  font-family: ykgy;
+  font-size: 18px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.footer-nav a:hover {
+  color: #333 !important;
+}
+
+/* Mobile adjustment */
+@media (max-width: 932px) {
+  .footer-nav {
+    margin-bottom: 00px; /* Increased mobile spacing */
+    margin-top: 00px; /* Increased mobile spacing */
+    padding: 0px 0 !important; /* Adjust if needed */
+  }
+  
+  
+  .footer-nav .nav-container {
+    flex-direction: row; /* Keep horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping if screen is too small */
+    gap: 15px 25px; /* 15px vertical, 25px horizontal */
+    justify-content: center;
+  }
+
+  .footer-nav a {
+    font-size: 16px; /* Slightly smaller on mobile */
+	
+  }
+}
+
+/* Remove any existing float/alignment */
+.footer-nav .gallery-title,
+.footer-nav .page-title {
+  float: none !important;
+  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+
+  
+}
+
+
+
+
+/* Show footer social strip on all devices */
+.js-responsive-nav {
+  display: block !important;
+  
+}
+
+/* Remove duplicate mobile social strip */
+@media (max-width: 932px) {
+  .site-header + .js-responsive-nav .pf-nav-social {
+    display: none !important;
+  }
+}
+
+
+/* Show BOTTOM social strip everywhere */
+.footer-social {
+  display: block !important;
+}
+
+/* Hide TOP social strip on desktop */
+@media (min-width: 933px) {
+  .js-responsive-nav:not(.footer-social) {
+    display: none !important;
+  }
+}
+
+/* Mobile keeps both strips by default */
+
+
+
+
+
+
+
+
+
+/* In your existing .site-footer rules */
+.site-footer {
+  padding-bottom: 00px;  /* Reduced from 120px */
+  padding-top: 30px;     /* Reduced from 120px */
+}
+
+/* Keep existing mobile styles intact */
+@media (max-width: 932px) {
+  .site-footer {
+    padding-bottom: 20px; /* Original mobile value */
+    padding-top: 20px;    /* Original mobile value */
+  }
+}
+
+@media (max-width: 540px) {
+  .site-footer {
+    padding-bottom: 20px; /* Original mobile value */
+    padding-top: 20px;    /* Original mobile value */
+  }
+}
+
+
+
+/* Desktop - Gold icons with red hover */
+.footer-social .pf-nav-social svg {
+  fill: #666 !important;
+}
+.footer-social .pf-nav-social a:hover svg {
+  fill: #333 !important;
+}
+
+/* Mobile - Blue icons with darker blue hover */
+@media (max-width: 932px) {
+  .footer-social .pf-nav-social svg {
+    fill: #666 !important;
+  }
+  .footer-social .pf-nav-social a:hover svg {
+    fill: #333 !important;
+  }
+}
+
+
+
+
+
+
+
+/* Desktop Styles (default) */
+.pf-nav-social svg {
+  fill: #666; /* Light grey */
+  transition: fill 0.3s ease;
+}
+
+.pf-nav-social a:hover svg {
+  fill: #333 !important; /* Medium grey on hover */
+}
+
+/* Mobile Styles (under 932px) */
+@media (max-width: 932px) {
+  .pf-nav-social svg {
+    fill: #666 !important; /* Darker grey */
+  }
+  
+  .pf-nav-social a:hover svg {
+    fill: #333 !important; /* Even darker on hover */
+  }
+}
+
