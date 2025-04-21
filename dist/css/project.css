@@ -3564,3 +3564,28 @@ nav {
   }
 }
 
+
+
+
+
+
+
+
+/* Add rounded corners to all images */
+.project-module .js-lightbox {
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px 0; /* Add vertical spacing between images */
+}
+
+/* Mobile padding adjustment */
+@media (max-width: 932px) {
+  #project-modules {
+    padding: 0 25px; /* Add horizontal padding on mobile */
+  }
+  
+  /* Optional: Slightly reduce border radius on mobile if needed */
+  .project-module .js-lightbox {
+    border-radius: 12px;
+  }
+}
