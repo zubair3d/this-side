@@ -3589,3 +3589,24 @@ nav {
     border-radius: 12px;
   }
 }
+
+
+
+
+
+
+/* Add to your CSS */
+.logo-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.logo {
+  width: auto !important; /* Reset any forced widths */
+}
+
+.logo a {
+  display: inline-block; /* Better for centering */
+  width: auto;
+}
