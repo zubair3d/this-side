@@ -1136,7 +1136,7 @@ nav {
 
 .site-footer {
   font-family: ykgy;
-  font-size: 14px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
@@ -1153,14 +1153,14 @@ nav {
 
 @media (max-width: 932px) {
   .site-footer {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     padding-bottom: 46px;
     padding-top: 46px; } }
 
 @media (max-width: 540px) {
   .site-footer {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     padding-bottom: 39px;
     padding-top: 39px; } }
@@ -3143,7 +3143,7 @@ nav {
 /* 1. Main header background & base styles */
 .site-header {
   background: #fff !important; /* Force white background */
-  box-shadow: 0 1px 3px rgba(0,0,0,.4); /* Optional subtle shadow */
+  box-shadow: 0 0px 5px rgba(0,0,0,.4); /* Optional subtle shadow */
 }
 
 /* 2. Desktop header text/icon colors */
@@ -3498,8 +3498,8 @@ nav {
 
 /* In your existing .site-footer rules */
 .site-footer {
-  padding-bottom: 00px;  /* Reduced from 120px */
-  padding-top: 30px;     /* Reduced from 120px */
+  padding-bottom: 15px;  /* Reduced from 120px */
+  padding-top: 15px;     /* Reduced from 120px */
 }
 
 /* Keep existing mobile styles intact */
