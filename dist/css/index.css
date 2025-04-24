@@ -1805,9 +1805,27 @@ nav {
 
 /* Container padding for screen edges */
 .project-covers {
-  padding: 40px 20px; /* Top/bottom - Left/right */
+  padding: 40px 100px; /* Top/bottom - Left/right */
   gap: 20px; /* Space between grid items */
 }
+
+
+
+
+
+/* Mobile layout */
+@media (max-width: 932px) {
+  .project-covers {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  
+}
+
+
+
+
 
 /* Desktop grid items */
 .project-cover {
