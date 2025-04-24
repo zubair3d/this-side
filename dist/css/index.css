@@ -422,7 +422,7 @@ body {
   visibility: hidden; }
 
 html {
-  background-color: #000000;
+  background-color: #fff;
   /* stylelint-disable function-url-quotes */
   background-image: url("");
   /* stylelint-enable function-url-quotes */
@@ -1077,7 +1077,7 @@ nav {
   .masthead:after {
     display: none; }
   .masthead h1 {
-    color: #fff;
+    color: #444;
     font-family: hsff;
     font-size: 38px;
     font-style: normal;
@@ -1112,6 +1112,7 @@ nav {
     padding-left: 5%;
     padding-right: 5%; }
     .masthead h1 {
+	  color: #444;
       font-size: 20px;
       line-height: 25px;
       margin-bottom: 25px;
@@ -1155,7 +1156,7 @@ nav {
   width: 100%; }
   .site-footer,
   .site-footer a {
-    color: #fcfcfc; }
+    color: #666; }
 
 @media (max-width: 932px) {
   .site-footer {
@@ -1784,6 +1785,148 @@ nav {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS */
+
+
+/* Container padding for screen edges */
+.project-covers {
+  padding: 40px 20px; /* Top/bottom - Left/right */
+  gap: 20px; /* Space between grid items */
+}
+
+/* Desktop grid items */
+.project-cover {
+  width: calc(50% - 10px); /* Account for gap */
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+/* Mobile layout */
+@media (max-width: 540px) {
+  .project-covers {
+    padding: 30px 15px;
+    gap: 15px;
+  }
+  
+  .project-cover {
+    width: 100%;
+  }
+}
+
+/* Optional: Add hover spacing consistency */
+.project-cover .cover-image-wrap {
+  margin: 10px;
+}
+
+.project-cover .cover-image {
+  border-radius: 8px; /* Optional rounded corners */
+  overflow: hidden;
+}
+
+
+/* END PROJECTS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MASTHEAD */
+
+
+/* Mobile styles (under 932px) */
+@media (max-width: 932px) {
+
+  /* 6. Masthead spacing */
+  .masthead {
+    order: 3;
+    padding: 30px 0 !important;
+  }
+  
+  /* Masthead font size */
+  .masthead .js-inline-text-editable.main-text {
+    font-size: 25px !important;
+    line-height: 31px !important;
+  }
+
+}
+
+
+
+/* Mast head font size */
+@media (max-width: 540px) {
+  .masthead .js-inline-text-editable.main-text {
+    font-size: 25px !important;
+    line-height: 31px !important;
+  }
+}
+
+
+
+/* 4. Keep masthead black */
+.masthead {
+  background-color: #fff !important;
+  margin-top: 60px; /* Offset for fixed header */
+}
+
+
+
+/* Desktop masthead height */
+@media (min-width: 933px) {
+  .masthead {
+    height: 30vh; /* Adjust desktop height */
+  }
+}
+
+/* Mobile masthead height */
+@media (max-width: 932px) {
+  .masthead {
+    height: 25vh; /* Adjust mobile height */
+    margin-top: 0; /* Remove header offset if needed */
+  }
+}
+
+
+/* END MASTHEAD */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Mobile styles (under 932px) */
 @media (max-width: 932px) {
   /* 1. Remove hamburger */
@@ -1833,11 +1976,6 @@ nav {
     fill: #666 !important;
   }
 
-  /* 6. Masthead spacing */
-  .masthead {
-    order: 3;
-    padding: 30px 0 !important;
-  }
 
   /* 7. Hide mobile overlay */
   .responsive-nav {
@@ -1860,123 +1998,11 @@ nav {
 
 }
 
-@media (max-width: 932px) {
-  .js-responsive-nav .pf-nav-social a:hover svg {
-    fill: #333 !important; /* 25% darker than original #666 */
-    transition: fill 0.2s ease;
-  }
-}
-
-
-/* Optional: Add hover effect ***DESKTOP*** */ 
-.js-responsive-nav .pf-nav-social a:hover svg {
-    fill: #333 !important; /* 25% darker than original #666 */
-    transition: fill 0.2s ease;
-}
-
-
-
-/* Masthead font size */
-@media (max-width: 932px) {
-  .masthead .js-inline-text-editable.main-text {
-    font-size: 25px !important;
-    line-height: 31px !important;
-  }
-}
-
-/* Mast head font size */
-@media (max-width: 540px) {
-  .masthead .js-inline-text-editable.main-text {
-    font-size: 25px !important;
-    line-height: 31px !important;
-  }
-}
 
 
 
 
 
-
-/* Add these changes to your index.css */
-
-/* Container padding for screen edges */
-.project-covers {
-  padding: 40px 20px; /* Top/bottom - Left/right */
-  gap: 20px; /* Space between grid items */
-}
-
-/* Desktop grid items */
-.project-cover {
-  width: calc(50% - 10px); /* Account for gap */
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-/* Mobile layout */
-@media (max-width: 540px) {
-  .project-covers {
-    padding: 30px 15px;
-    gap: 15px;
-  }
-  
-  .project-cover {
-    width: 100%;
-  }
-}
-
-/* Optional: Add hover spacing consistency */
-.project-cover .cover-image-wrap {
-  margin: 10px;
-}
-
-.project-cover .cover-image {
-  border-radius: 8px; /* Optional rounded corners */
-  overflow: hidden;
-}
-
-
-/* With this: */
-.js-responsive-nav .pf-nav-social {
-  /* Works on all screen sizes */
-  width: 100% !important; /* Force full width */
-  background: #fff !important; /* White background */
-  padding: 20px 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-.js-responsive-nav .pf-nav-social svg {
-  fill: #666 !important;
-  height: 35px !important; /* Match desktop size */
-  width: 35px !important;
-}
-
-
-
-
-
-
-
-
-/* HEADER Navigation links only */
-.site-header .nav-container a {
-  color: #666 !important;
-  transition: color 0.3s ease;
-}
-
-.site-header .nav-container a:hover {
-  color: #333 !important;
-}
-
-/* Social icons (header only) */
-.site-header .pf-nav-social svg {
-  fill: #666 !important;
-  transition: fill 0.3s ease;
-}
-
-.site-header .pf-nav-social a:hover svg {
-  fill: #333 !important;
-}
 
 
 /* HEADER Navigation links - Enhanced Specificity */
@@ -2001,7 +2027,7 @@ nav {
   transition: fill 0.3s ease !important;
 }
 
-.site-header .pf-nav-social a:hover svg {
+.site-header 
   fill: #333 !important;
 }
 
@@ -2009,18 +2035,31 @@ nav {
 
 
 
+/* 5. Header height/spacing adjustments */
+.site-header {
+  height: auto !important;
+  padding: 20px 3% !important;
+}
 
 
 
+/* 5. Header height/spacing adjustments MOBILE */ 
+@media (max-width: 932px) {
+.site-header {
+  height: auto !important;
+  padding: 8px 3% !important;
+  }
+}
 
-
-
+  nav {
+    padding: 28px 0 !important;
+  }
 
 
 /* 1. Main header background & base styles */
 .site-header {
   background: #fff !important; /* Force white background */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Optional subtle shadow */
+  box-shadow: 0 0px 5px rgba(0,0,0,.4); /* Optional subtle shadow */
 }
 
 /* 2. Desktop header text/icon colors */
@@ -2072,11 +2111,6 @@ nav {
   }
 }
 
-/* 4. Keep masthead black */
-.masthead {
-  background-color: #000 !important;
-  margin-top: 60px; /* Offset for fixed header */
-}
 
 /* 5. Header height/spacing adjustments */
 .site-header {
@@ -2121,55 +2155,187 @@ nav {
 
 
 
-/* Desktop masthead height */
-@media (min-width: 933px) {
-  .masthead {
-    height: 30vh; /* Adjust desktop height */
+/* With this: */
+.js-responsive-nav .pf-nav-social {
+  /* Works on all screen sizes */
+  width: 100% !important; /* Force full width */
+  background: #fff !important; /* White background */
+  padding: 20px 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.js-responsive-nav .pf-nav-social svg {
+  height: 35px !important; /* Match desktop size */
+  width: 35px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 932px) {
+  /* Show social icons on mobile */
+  .site-header .pf-nav-social {
+    display: flex !important;
+    order: 3;
+    width: 100%;
+    margin-top: 0px;
+    padding: 5px 0;
+  }
+
+  /* Center social icons */
+  .pf-nav-social ul {
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Adjust icon spacing */
+  .pf-nav-social li {
+    padding: 0 15px !important;
+  }
+
+  /* Reduce icon size for mobile */
+  .pf-nav-social svg {
+    height: 33px !important;
+    width: 33px !important;
+  }
+
+  /* Stack header elements vertically */
+  .site-header {
+    flex-direction: column;
+    padding: 15px 5% !important;
+  }
+
+  /* Adjust navigation spacing */
+  .nav-container {
+    order: 2;
+    margin: 17px 0;
+  }
+
+  /* Center logo */
+  .logo-wrap {
+    order: 1;
+    text-align: center;
   }
 }
 
-/* Mobile masthead height */
+
 @media (max-width: 932px) {
-  .masthead {
-    height: 30vh; /* Adjust mobile height */
-    margin-top: 0; /* Remove header offset if needed */
+  /* Remove default list padding */
+  .pf-nav-social ul {
+    padding-left: 0 !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  /* Remove individual side paddings */
+  .pf-nav-social li:first-child,
+  .pf-nav-social li:last-child {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }
+
+
+
+
+@media (max-width: 932px) {
+  /* Add vertical padding to nav links */
+  nav .gallery-title a,
+  nav .project-title a,
+  nav .page-title a,
+  nav .link-title a {
+    padding-top: 5px !important;
+    padding-bottom: 10px !important;
+    display: inline-block; /* Ensures padding works properly */
+  }
+
+  /* Optional: Adjust overall nav container spacing */
+  .nav-container {
+    margin: 000px 0; /* Adds space above/below the navigation */
+  }
+}
+
+
+
+/* Add dropshadow line */
+.site-footer {
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.40);
+  padding-top: 40px; /* Space between line and text */
+  padding-bottom: 40px; /* Space between text and browser bottom */
+}
+
+/* Mobile adjustments */
+@media (max-width: 932px) {
+  .site-footer {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 540px) {
+  .site-footer {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+
+
 
 
 
 
 /* Footer navigation */
 .footer-nav {
-  padding: 40px 0;
-  text-align: center;
   width: 100%;
+  padding: 00px 0;
+  text-align: center;
+  background: #fff;
 }
 
 .footer-nav .nav-container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 0 auto;
-  padding: 0 20px;
+  gap: 20px;
 }
 
 .footer-nav a {
-  color: #DCDCDC;
+  color: #666 !important;
   font-family: ykgy;
   font-size: 18px;
-  transition: opacity 0.3s ease;
   white-space: nowrap; /* Prevent text wrapping */
 }
 
 .footer-nav a:hover {
-  opacity: 0.7;
+  color: #333 !important;
 }
 
 /* Mobile adjustment */
 @media (max-width: 932px) {
   .footer-nav {
-    margin-bottom: 30px; /* Increased mobile spacing */
+    margin-bottom: 00px; /* Increased mobile spacing */
+    margin-top: 00px; /* Increased mobile spacing */
     padding: 0px 0 !important; /* Adjust if needed */
   }
   
@@ -2183,6 +2349,7 @@ nav {
 
   .footer-nav a {
     font-size: 16px; /* Slightly smaller on mobile */
+	
   }
 }
 
@@ -2193,6 +2360,12 @@ nav {
   text-align: center;
   margin: 0 !important;
   padding: 0 !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+
+  
 }
 
 
@@ -2201,6 +2374,7 @@ nav {
 /* Show footer social strip on all devices */
 .js-responsive-nav {
   display: block !important;
+  
 }
 
 /* Remove duplicate mobile social strip */
@@ -2235,21 +2409,115 @@ nav {
 
 /* In your existing .site-footer rules */
 .site-footer {
-  padding-bottom: 60px;  /* Reduced from 120px */
-  padding-top: 60px;     /* Reduced from 120px */
+  padding-bottom: 15px;  /* Reduced from 120px */
+  padding-top: 15px;     /* Reduced from 120px */
 }
 
 /* Keep existing mobile styles intact */
 @media (max-width: 932px) {
   .site-footer {
-    padding-bottom: 46px; /* Original mobile value */
-    padding-top: 46px;    /* Original mobile value */
+    padding-bottom: 20px; /* Original mobile value */
+    padding-top: 20px;    /* Original mobile value */
   }
 }
 
 @media (max-width: 540px) {
   .site-footer {
-    padding-bottom: 39px; /* Original mobile value */
-    padding-top: 39px;    /* Original mobile value */
+    padding-bottom: 20px; /* Original mobile value */
+    padding-top: 20px;    /* Original mobile value */
   }
+}
+
+
+
+/* Desktop - Gold icons with red hover */
+.footer-social .pf-nav-social svg {
+  fill: #666 !important;
+}
+.footer-social .pf-nav-social a:hover svg {
+  fill: #333 !important;
+}
+
+/* Mobile - Blue icons with darker blue hover */
+@media (max-width: 932px) {
+  .footer-social .pf-nav-social svg {
+    fill: #666 !important;
+  }
+  .footer-social .pf-nav-social a:hover svg {
+    fill: #333 !important;
+  }
+}
+
+
+
+
+
+
+
+/* Desktop Styles (default) */
+.pf-nav-social svg {
+  fill: #666; /* Light grey */
+  transition: fill 0.3s ease;
+}
+
+.pf-nav-social a:hover svg {
+  fill: #333 !important; /* Medium grey on hover */
+}
+
+/* Mobile Styles (under 932px) */
+@media (max-width: 932px) {
+  .pf-nav-social svg {
+    fill: #666 !important; /* Darker grey */
+  }
+  
+  .pf-nav-social a:hover svg {
+    fill: #333 !important; /* Even darker on hover */
+  }
+}
+
+
+
+
+
+
+
+
+/* Add rounded corners to all images */
+.project-module .js-lightbox {
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px 0; /* Add vertical spacing between images */
+}
+
+/* Mobile padding adjustment */
+@media (max-width: 932px) {
+  #project-modules {
+    padding: 0 25px; /* Add horizontal padding on mobile */
+  }
+  
+  /* Optional: Slightly reduce border radius on mobile if needed */
+  .project-module .js-lightbox {
+    border-radius: 12px;
+  }
+}
+
+
+
+
+
+
+/* Add to your CSS */
+.logo-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.logo {
+  width: auto !important; /* Reset any forced widths */
+}
+
+.logo a {
+  display: inline-block; /* Better for centering */
+  width: auto;
 }
