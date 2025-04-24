@@ -1820,11 +1820,7 @@ nav {
     gap: 20px;
   }
 
-  
 }
-
-
-
 
 
 /* Desktop grid items */
@@ -1858,16 +1854,6 @@ nav {
 
 
 /* END PROJECTS */
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2113,7 +2099,8 @@ nav {
 
   .logo-wrap {
     order: -1;
-    padding: 10px 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 5px !important;
   }
 
   /* Center mobile navigation */
@@ -2280,8 +2267,8 @@ nav {
   nav .project-title a,
   nav .page-title a,
   nav .link-title a {
-    padding-top: 5px !important;
-    padding-bottom: 10px !important;
+    padding-top: 00px !important;
+    padding-bottom: 00px !important;
     display: inline-block; /* Ensures padding works properly */
   }
 
