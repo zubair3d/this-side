@@ -1909,8 +1909,8 @@ nav {
 /* Mobile masthead height */
 @media (max-width: 932px) {
   .masthead {
-    height: 25vh; /* Adjust mobile height */
-    margin-top: 0; /* Remove header offset if needed */
+    height: 15vh; /* Adjust mobile height */
+    margin-top: 5vh; /* Remove header offset if needed */
   }
 }
 
