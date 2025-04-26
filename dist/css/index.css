@@ -2524,6 +2524,28 @@ nav {
 
 
 
+/* Add this to your CSS */
+.project-cover .cover,
+.project-cover .cover-normal,
+.project-cover .cover-rollover {
+  transition-duration: 0.15s !important; /* Change this value */
+  transition-timing-function: ease-in-out !important;
+}
+
+/* For smooth image scaling */
+.project-cover .cover__img {
+  transition: transform 0.15s ease-in-out !important;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* END PROJECTS */
 
@@ -3198,25 +3220,4 @@ nav {
   display: inline-block; /* Better for centering */
   width: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
